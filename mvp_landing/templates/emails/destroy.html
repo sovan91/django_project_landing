@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<form method="POST">
+	{% csrf_token %}
+	<p>Are you sure, you want to delete {{ object.id }} ?</p>
+	<input type="Submit" value="Delete?"/>
+</form>
+
+{% endblock %}
